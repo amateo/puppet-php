@@ -33,12 +33,14 @@ class php::globals (
   if ($php_version == undef) {
     $globals_php_version = $facts['os']['name'] ? {
       'Debian' => $facts['os']['release']['major'] ? {
+        '9'     => '7.0',
         '10'    => '7.3',
         '11'    => '7.4',
         '12'    => '8.2',
         default => fail("Unsupported Debian release: ${fact('os.release.major')}"),
       },
       'Ubuntu' => $facts['os']['release']['major'] ? {
+        '16.04' => '7.0',
         '18.04' => '7.2',
         '20.04' => '7.4',
         '22.04' => '8.1',
