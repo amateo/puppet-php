@@ -18,6 +18,10 @@ describe 'php with default settings' do
                     'php8.1-fpm'
                   when %r{ubuntu-18.04}
                     'php7.2-fpm'
+                  when %r{ubuntu-16.04}
+                    packagename = 'php7.0-fpm'
+                  when %r{debian-9}
+                    packagename = 'php7.0-fpm'
                   when %r{debian-10}
                     'php7.3-fpm'
                   else
@@ -35,7 +39,7 @@ describe 'php with default settings' do
 
   context 'default parameters with extensions' do
     case default[:platform]
-    when %r{ubuntu-22.04}, %r{ubuntu-20.04}, %r{ubuntu-18.04}
+    when %r{ubuntu-22.04}, %r{ubuntu-20.04}, %r{ubuntu-18.04}, %r{ubuntu-16.04}
       it 'works with defaults' do
         case default[:platform]
         when %r{ubuntu-22.04}
@@ -44,6 +48,8 @@ describe 'php with default settings' do
           simplexmlpackagename = 'php7.4-xml'
         when %r{ubuntu-18.04}
           simplexmlpackagename = 'php7.2-xml'
+        when %r{ubuntu-16.04}
+          simplexmlpackagename = 'php7.0-xml'
         end
         pp = <<-EOS
         class{ 'php':
@@ -86,6 +92,10 @@ describe 'php with default settings' do
                     'php8.1-fpm'
                   when %r{ubuntu-18.04}
                     'php7.2-fpm'
+                  when %r{ubuntu-16.04}
+                    packagename = 'php7.0-fpm'
+                  when %r{debian-9}
+                    packagename = 'php7.0-fpm'
                   when %r{debian-10}
                     'php7.3-fpm'
                   else

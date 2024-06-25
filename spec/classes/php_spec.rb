@@ -16,6 +16,8 @@ describe 'php', type: :class do
                             'php7.4-cli'
                           when '10'
                             'php7.3-cli'
+                          when '9'
+                            'php7.0-cli'
                           else
                             'php5-cli'
                           end
@@ -27,6 +29,8 @@ describe 'php', type: :class do
                             'php7.4-cli'
                           when '18.04'
                             'php7.2-cli'
+                          when '16.04'
+                            'php7.0-cli'
                           else
                             'php5-cli'
                           end
@@ -38,6 +42,8 @@ describe 'php', type: :class do
                             'php7.4-fpm'
                           when '10'
                             'php7.3-fpm'
+                          when '9'
+                            'php7.0-fpm'
                           else
                             'php5-fpm'
                           end
@@ -49,6 +55,8 @@ describe 'php', type: :class do
                             'php7.4-fpm'
                           when '18.04'
                             'php7.2-fpm'
+                          when '16.04'
+                            'php7.0-fpm'
                           else
                             'php5-fpm'
                           end
@@ -60,6 +68,8 @@ describe 'php', type: :class do
                             'php7.4-dev'
                           when '10'
                             'php7.3-dev'
+                          when '9'
+                            'php7.0-dev'
                           else
                             'php5-dev'
                           end
@@ -71,6 +81,8 @@ describe 'php', type: :class do
                             'php7.4-dev'
                           when '18.04'
                             'php7.2-dev'
+                          when '16.04'
+                            'php7.0-dev'
                           else
                             'php5-dev'
                           end
@@ -182,6 +194,8 @@ describe 'php', type: :class do
                         '/etc/php/7.4/fpm/pool.d/www.conf'
                       when '10'
                         '/etc/php/7.3/fpm/pool.d/www.conf'
+                      when '9'
+                        '/etc/php/7.0/fpm/pool.d/www.conf'
                       else
                         '/etc/php5/fpm/pool.d/www.conf'
                       end
@@ -193,6 +207,8 @@ describe 'php', type: :class do
                         '/etc/php/7.4/fpm/pool.d/www.conf'
                       when '18.04'
                         '/etc/php/7.2/fpm/pool.d/www.conf'
+                      when '16.04'
+                        '/etc/php/7.0/fpm/pool.d/www.conf'
                       else
                         '/etc/php5/fpm/pool.d/www.conf'
                       end
@@ -225,6 +241,8 @@ describe 'php', type: :class do
                         '/etc/php/7.4/fpm/pool.d/www.conf'
                       when '10'
                         '/etc/php/7.3/fpm/pool.d/www.conf'
+                      when '9'
+                        '/etc/php/7.0/fpm/pool.d/www.conf'
                       else
                         '/etc/php5/fpm/pool.d/www.conf'
                       end
@@ -236,6 +254,8 @@ describe 'php', type: :class do
                         '/etc/php/7.4/fpm/pool.d/www.conf'
                       when '18.04'
                         '/etc/php/7.2/fpm/pool.d/www.conf'
+                      when '16.04'
+                        '/etc/php/7.0/fpm/pool.d/www.conf'
                       else
                         '/etc/php5/fpm/pool.d/www.conf'
                       end
@@ -267,6 +287,8 @@ describe 'php', type: :class do
                         '/etc/php/7.4/fpm/pool.d/www.conf'
                       when '10'
                         '/etc/php/7.3/fpm/pool.d/www.conf'
+                      when '9'
+                        '/etc/php/7.0/fpm/pool.d/www.conf'
                       else
                         '/etc/php5/fpm/pool.d/www.conf'
                       end
@@ -278,6 +300,8 @@ describe 'php', type: :class do
                         '/etc/php/7.4/fpm/pool.d/www.conf'
                       when '18.04'
                         '/etc/php/7.2/fpm/pool.d/www.conf'
+                      when '16.04'
+                        '/etc/php/7.0/fpm/pool.d/www.conf'
                       else
                         '/etc/php5/fpm/pool.d/www.conf'
                       end

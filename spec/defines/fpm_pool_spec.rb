@@ -21,6 +21,8 @@ describe 'php::fpm::pool' do
             it { is_expected.to contain_file('/etc/php/7.4/fpm/pool.d/unique-name.conf') }
           when '10'
             it { is_expected.to contain_file('/etc/php/7.3/fpm/pool.d/unique-name.conf') }
+          when '9'
+            it { is_expected.to contain_file('/etc/php/7.0/fpm/pool.d/unique-name.conf') }
           else
             it { is_expected.to contain_file('/etc/php5/fpm/pool.d/unique-name.conf') }
           end
@@ -37,6 +39,8 @@ describe 'php::fpm::pool' do
             it { is_expected.to contain_file('/etc/php/7.4/fpm/pool.d/unique-name.conf') }
           when '18.04'
             it { is_expected.to contain_file('/etc/php/7.2/fpm/pool.d/unique-name.conf') }
+          when '16.04'
+            it { is_expected.to contain_file('/etc/php/7.0/fpm/pool.d/unique-name.conf') }
           else
             it { is_expected.to contain_file('/etc/php5/fpm/pool.d/unique-name.conf') }
           end

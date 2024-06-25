@@ -38,6 +38,8 @@ describe 'php::fpm::service', type: :class do
             it { is_expected.to contain_service('php7.3-fpm').with_ensure('running') }
           when '20.04', '11'
             it { is_expected.to contain_service('php7.4-fpm').with_ensure('running') }
+          when '16.04'
+            it { is_expected.to contain_service('php7.0-fpm').with_ensure('running') }
           end
         when 'Suse', 'FreeBSD'
           it { is_expected.to contain_service('php-fpm').with_ensure('running') }
