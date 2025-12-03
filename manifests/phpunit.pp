@@ -23,7 +23,7 @@ class php::phpunit (
 ) inherits php::params {
   assert_private()
 
-  stdlib::ensure_packages(['wget'])
+  ensure_packages(['wget'])
 
   exec { 'download phpunit':
     command => "wget ${source} -O ${path}",
