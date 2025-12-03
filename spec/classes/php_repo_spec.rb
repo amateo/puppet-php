@@ -22,9 +22,9 @@ describe 'php::repo', type: :class do
       end
 
       describe 'when configuring a package repo' do
-        case facts[:os]['family']
+        case facts[:osfamily]
         when 'Debian'
-          case facts[:os]['name']
+          case facts[:operatingsystem]
           when 'Debian'
             it { is_expected.to contain_class('php::repo::debian') }
           when 'Ubuntu'

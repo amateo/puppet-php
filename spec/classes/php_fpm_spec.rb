@@ -16,9 +16,9 @@ describe 'php::fpm', type: :class do
 
       describe 'when called with no parameters' do
         # rubocop:disable RSpec/RepeatedExample
-        case facts[:os]['family']
+        case facts[:osfamily]
         when 'Debian'
-          case facts[:operatingsystemrelease]
+          case facts[:os]['release']['major']
           when '16.04'
             it { is_expected.to contain_package('php7.0-fpm').with_ensure('present') }
           when '18.04'
